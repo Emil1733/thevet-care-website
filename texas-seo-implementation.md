@@ -75,14 +75,14 @@
 - [x] Add Houston-specific content and statistics
 
 ### Task 3.2: Dallas Pages (Population: 1.3M)
-- [ ] Create `/texas/dallas/` main page
-- [ ] Build `/texas/dallas/emergency-vet` page
-- [ ] Build `/texas/dallas/veterinarian` page
-- [ ] Build `/texas/dallas/animal-hospital` page
-- [ ] Build `/texas/dallas/24-hour-vet` page
-- [ ] Build `/texas/dallas/pet-clinic` page
-- [ ] Optimize all Dallas pages for local SEO
-- [ ] Add Dallas-specific content and statistics
+- [x] Create `/texas/dallas/` main page
+- [x] Build `/texas/dallas/emergency-vet` page
+- [x] Build `/texas/dallas/veterinarian` page
+- [x] Build `/texas/dallas/animal-hospital` page
+- [x] Build `/texas/dallas/24-hour-vet` page
+- [x] Build `/texas/dallas/pet-clinic` page
+- [x] Optimize all Dallas pages for local SEO
+- [x] Add Dallas-specific content and statistics
 
 ### Task 3.3: San Antonio Pages (Population: 1.5M)
 - [ ] Create `/texas/san-antonio/` main page
