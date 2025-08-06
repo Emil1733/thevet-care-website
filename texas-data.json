@@ -1,0 +1,299 @@
+{
+  "texas": {
+    "overview": {
+      "population": "30,500,000",
+      "totalVets": "3,200+",
+      "averageCost": "$85",
+      "responseTime": "38 minutes",
+      "petOwnership": "62%",
+      "regulations": "Texas State Board of Veterinary Medical Examiners licensed",
+      "climateConsiderations": ["Heat stroke prevention", "Hurricane preparedness", "Tick-borne diseases", "Snake bite treatment"]
+    },
+    "cities": [
+      {
+        "name": "Houston",
+        "slug": "houston",
+        "population": "2,300,000",
+        "metroPopulation": "7,100,000",
+        "averageVetCost": "$85",
+        "responseTime": "42 minutes",
+        "numVets": "247",
+        "emergencyVets": "38",
+        "specialties": ["Emergency", "Exotic", "Mobile", "Cardiology", "Oncology"],
+        "zipcodes": ["77001", "77002", "77003", "77004", "77005", "77006", "77007", "77008"],
+        "neighborhoods": ["Downtown", "Midtown", "Montrose", "River Oaks", "Galleria", "Medical Center"],
+        "keyFeatures": [
+          "Largest city in Texas",
+          "Major medical hub with veterinary specialists",
+          "24/7 emergency services available",
+          "Home to Texas A&M Veterinary School satellite programs"
+        ],
+        "localInfo": {
+          "petRegistration": "Required within 30 days",
+          "commonIssues": ["Heat-related illness", "Hurricane evacuation planning", "Heartworm prevention"],
+          "averagePetOwnership": "58%"
+        }
+      },
+      {
+        "name": "Dallas",
+        "slug": "dallas",
+        "population": "1,300,000",
+        "metroPopulation": "7,700,000",
+        "averageVetCost": "$82",
+        "responseTime": "38 minutes",
+        "numVets": "198",
+        "emergencyVets": "29",
+        "specialties": ["Emergency", "Surgery", "Dermatology", "Internal Medicine", "Dentistry"],
+        "zipcodes": ["75201", "75202", "75203", "75204", "75205", "75206", "75207", "75208"],
+        "neighborhoods": ["Downtown", "Deep Ellum", "Uptown", "Bishop Arts", "Lake Highlands", "Preston Center"],
+        "keyFeatures": [
+          "Major metropolitan area",
+          "Corporate headquarters for major pet companies",
+          "Advanced veterinary specialty centers",
+          "Strong network of 24-hour emergency clinics"
+        ],
+        "localInfo": {
+          "petRegistration": "Required for dogs and cats",
+          "commonIssues": ["Seasonal allergies", "Heat stress", "Urban wildlife encounters"],
+          "averagePetOwnership": "61%"
+        }
+      },
+      {
+        "name": "San Antonio",
+        "slug": "san-antonio",
+        "population": "1,500,000",
+        "metroPopulation": "2,600,000",
+        "averageVetCost": "$78",
+        "responseTime": "35 minutes",
+        "numVets": "176",
+        "emergencyVets": "24",
+        "specialties": ["Emergency", "Exotic", "Mobile", "Surgery", "Rehabilitation"],
+        "zipcodes": ["78201", "78202", "78203", "78204", "78205", "78206", "78207", "78208"],
+        "neighborhoods": ["Downtown", "Southtown", "Stone Oak", "Alamo Heights", "Westside", "Northeast"],
+        "keyFeatures": [
+          "Rich Hispanic culture with bilingual veterinary services",
+          "Military community with deployment pet care services",
+          "Historic city with established veterinary practices",
+          "Gateway to South Texas rural veterinary needs"
+        ],
+        "localInfo": {
+          "petRegistration": "Required with current vaccinations",
+          "commonIssues": ["Rattlesnake encounters", "Heat-related illness", "Flea and tick prevention"],
+          "averagePetOwnership": "59%"
+        }
+      },
+      {
+        "name": "Austin",
+        "slug": "austin",
+        "population": "965,000",
+        "metroPopulation": "2,400,000",
+        "averageVetCost": "$88",
+        "responseTime": "32 minutes",
+        "numVets": "152",
+        "emergencyVets": "21",
+        "specialties": ["Emergency", "Holistic", "Mobile", "Behavioral", "Alternative Medicine"],
+        "zipcodes": ["78701", "78702", "78703", "78704", "78705", "78712", "78721", "78722"],
+        "neighborhoods": ["Downtown", "South Austin", "East Austin", "Westlake", "Barton Hills", "Mueller"],
+        "keyFeatures": [
+          "Keep Austin Weird - progressive pet care culture",
+          "Tech hub with busy professionals needing convenient vet care",
+          "Dog-friendly city with extensive off-leash parks",
+          "Home to holistic and alternative veterinary medicine"
+        ],
+        "localInfo": {
+          "petRegistration": "Required registration and microchipping",
+          "commonIssues": ["Lake water safety", "Outdoor adventure injuries", "Urban coyote encounters"],
+          "averagePetOwnership": "65%"
+        }
+      },
+      {
+        "name": "Fort Worth",
+        "slug": "fort-worth",
+        "population": "935,000",
+        "metroPopulation": "7,700,000",
+        "averageVetCost": "$81",
+        "responseTime": "36 minutes",
+        "numVets": "143",
+        "emergencyVets": "19",
+        "specialties": ["Emergency", "Large Animal", "Equine", "Surgery", "Reproduction"],
+        "zipcodes": ["76101", "76102", "76103", "76104", "76105", "76106", "76107", "76108"],
+        "neighborhoods": ["Downtown", "Cultural District", "Sundance Square", "TCU Area", "Stockyards", "Westside"],
+        "keyFeatures": [
+          "Cowtown heritage with strong equine veterinary services",
+          "Part of Dallas-Fort Worth metroplex",
+          "Mix of urban and rural veterinary needs",
+          "Home to livestock and companion animal practices"
+        ],
+        "localInfo": {
+          "petRegistration": "Required with proof of rabies vaccination",
+          "commonIssues": ["Large animal emergencies", "Rodeo and show animal care", "Urban wildlife"],
+          "averagePetOwnership": "57%"
+        }
+      },
+      {
+        "name": "El Paso",
+        "slug": "el-paso",
+        "population": "695,000",
+        "metroPopulation": "844,000",
+        "averageVetCost": "$72",
+        "responseTime": "44 minutes",
+        "numVets": "89",
+        "emergencyVets": "12",
+        "specialties": ["Emergency", "Desert Medicine", "Border Health", "Mobile"],
+        "zipcodes": ["79901", "79902", "79903", "79904", "79905", "79907", "79912", "79915"],
+        "neighborhoods": ["Downtown", "Westside", "Northeast", "Far East", "Lower Valley", "Upper Valley"],
+        "keyFeatures": [
+          "Border city with unique health challenges",
+          "Desert climate requires specialized pet care",
+          "Bilingual veterinary services common",
+          "Military community with deployment services"
+        ],
+        "localInfo": {
+          "petRegistration": "Required with health certificate",
+          "commonIssues": ["Desert climate adaptation", "Cross-border travel health", "Military deployment care"],
+          "averagePetOwnership": "52%"
+        }
+      }
+    ],
+    "services": [
+      {
+        "name": "Emergency Vet",
+        "slug": "emergency-vet",
+        "description": "24/7 emergency veterinary care for critical pet situations",
+        "averageCost": "$200-$800",
+        "urgency": "Immediate",
+        "commonSituations": [
+          "Pet hit by car",
+          "Difficulty breathing",
+          "Severe bleeding",
+          "Poisoning",
+          "Seizures",
+          "Unable to urinate",
+          "Bloating or vomiting",
+          "Heat stroke"
+        ],
+        "texasSpecific": [
+          "Snake bite treatment",
+          "Heat-related emergencies",
+          "Hurricane evacuation planning",
+          "Tick-borne disease treatment"
+        ]
+      },
+      {
+        "name": "Veterinarian", 
+        "slug": "veterinarian",
+        "description": "General practice veterinarian for routine and preventive care",
+        "averageCost": "$50-$150",
+        "urgency": "Routine",
+        "commonServices": [
+          "Annual wellness exams",
+          "Vaccinations",
+          "Spay/neuter surgery",
+          "Dental cleaning",
+          "Basic diagnostics",
+          "Prescription medications",
+          "Health certificates",
+          "Microchipping"
+        ],
+        "texasSpecific": [
+          "Heartworm prevention programs",
+          "Tick and flea prevention",
+          "Heat safety education",
+          "Travel health certificates"
+        ]
+      },
+      {
+        "name": "Animal Hospital",
+        "slug": "animal-hospital",
+        "description": "Full-service animal hospital with advanced medical capabilities",
+        "averageCost": "$75-$300",
+        "urgency": "Varies",
+        "commonServices": [
+          "Surgery and orthopedics",
+          "Advanced diagnostics",
+          "Hospitalization",
+          "Specialty consultations",
+          "Rehabilitation services",
+          "Pharmacy services",
+          "Laboratory testing",
+          "Imaging services"
+        ],
+        "texasSpecific": [
+          "Large animal services",
+          "Exotic pet specialization",
+          "Hurricane preparedness planning",
+          "Climate-specific treatments"
+        ]
+      },
+      {
+        "name": "24 Hour Vet",
+        "slug": "24-hour-vet",
+        "description": "Round-the-clock veterinary care for emergencies and urgent situations",
+        "averageCost": "$150-$500",
+        "urgency": "Urgent",
+        "availability": "24/7/365",
+        "commonSituations": [
+          "After-hours emergencies",
+          "Weekend urgent care",
+          "Holiday pet emergencies",
+          "Overnight monitoring",
+          "Critical care transfer",
+          "Post-surgery monitoring"
+        ],
+        "texasSpecific": [
+          "Storm-related injuries",
+          "Heat emergency treatment",
+          "Rural area emergency transport",
+          "Border crossing health issues"
+        ]
+      },
+      {
+        "name": "Pet Clinic",
+        "slug": "pet-clinic",
+        "description": "Convenient neighborhood pet clinic for basic and routine care",
+        "averageCost": "$40-$120",
+        "urgency": "Routine",
+        "commonServices": [
+          "Basic wellness exams",
+          "Vaccinations",
+          "Minor treatments",
+          "Prescription refills",
+          "Health screenings",
+          "Behavioral consultations",
+          "Nutritional counseling",
+          "Senior pet care"
+        ],
+        "texasSpecific": [
+          "Mobile clinic services",
+          "Rural outreach programs",
+          "Community vaccination drives",
+          "Low-cost spay/neuter programs"
+        ]
+      }
+    ],
+    "keywords": {
+      "primary": [
+        "emergency vet {city} tx",
+        "veterinarian {city} texas", 
+        "animal hospital {city}",
+        "24 hour vet {city}",
+        "pet clinic {city} tx"
+      ],
+      "secondary": [
+        "vet near me {city}",
+        "emergency animal hospital {city}",
+        "dog vet {city} texas",
+        "cat vet {city} tx",
+        "pet doctor {city}"
+      ],
+      "longTail": [
+        "emergency vet {city} open now",
+        "cheapest vet {city} texas",
+        "best veterinarian {city} tx",
+        "24 hour animal hospital {city}",
+        "mobile vet {city} texas",
+        "exotic pet vet {city} tx"
+      ]
+    }
+  }
+}

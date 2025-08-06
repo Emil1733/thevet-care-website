@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texas Veterinarians | Find Vets in Texas | TheVet.care</title>
+    <meta name="description" content="Find trusted veterinarians across Texas. 3,200+ verified Texas vets in Houston, Dallas, Austin, San Antonio & more. Average response time 38 minutes. Free for pet owners.">
+    <meta name="keywords" content="Texas veterinarian, find vet Texas, emergency vet Texas, animal hospital Texas, pet clinic Texas">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Texas Veterinarians | Find Vets in Texas | TheVet.care">
+    <meta property="og:description" content="Find trusted veterinarians across Texas. 3,200+ verified Texas vets statewide.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thevet.care/texas/">
+    <meta property="og:image" content="https://thevet.care/images/texas-vets.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://thevet.care/texas/">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="../styles.css" as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "TheVet.care - Texas Veterinary Services",
+        "description": "Find trusted veterinarians across Texas",
+        "url": "https://thevet.care/texas/",
+        "areaServed": {
+            "@type": "State",
+            "name": "Texas"
+        },
+        "serviceArea": {
+            "@type": "State", 
+            "name": "Texas, United States"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Texas Veterinary Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Emergency Veterinary Care",
+                        "areaServed": "Texas"
+                    }
+                },
+                {
+                    "@type": "Offer", 
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "General Veterinary Care",
+                        "areaServed": "Texas"
+                    }
+                }
+            ]
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "15,000"
+        }
+    }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "TheVet.care",
+                "item": "https://thevet.care/"
+            },
+            {
+                "@type": "ListItem", 
+                "position": 2,
+                "name": "Texas Veterinarians",
+                "item": "https://thevet.care/texas/"
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="../">
+                        <img src="../images/logo.png" alt="TheVet.care" width="240" height="60" class="logo">
+                    </a>
+                </div>
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="../#home" role="menuitem">Home</a></li>
+                    <li role="none"><a href="../#services" role="menuitem">Services</a></li>
+                    <li role="none"><a href="../#about" role="menuitem">About</a></li>
+                    <li role="none"><a href="../#contact" role="menuitem">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item"><a href="../">TheVet.care</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Texas Veterinarians</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero texas-hero" role="banner">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Find Trusted Veterinarians in Texas</h1>
+                <p class="hero-subtitle">Connect with 3,200+ verified veterinarians across the Lone Star State. From Houston to El Paso, we'll help you find the right vet for your pet.</p>
+                
+                <div class="texas-stats">
+                    <div class="stat">
+                        <span class="stat-number">3,200+</span>
+                        <span class="stat-label">Texas Veterinarians</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">38 min</span>
+                        <span class="stat-label">Avg Response Time</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">62%</span>
+                        <span class="stat-label">Pet Ownership Rate</span>
+                    </div>
+                </div>
+                
+                <div class="search-container">
+                    <select class="search-select" id="texasCitySelect">
+                        <option value="">Select Your Texas City</option>
+                        <option value="houston">Houston</option>
+                        <option value="dallas">Dallas</option>
+                        <option value="san-antonio">San Antonio</option>
+                        <option value="austin">Austin</option>
+                        <option value="fort-worth">Fort Worth</option>
+                        <option value="el-paso">El Paso</option>
+                    </select>
+                    <button class="btn btn-primary search-btn" onclick="searchTexasCityVets()">Find Vets</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Texas Cities Grid -->
+    <section id="texas-cities" class="cities-section" role="main">
+        <div class="container">
+            <div class="section-header">
+                <h2>Major Texas Cities We Serve</h2>
+                <p>Find veterinarians in Texas's largest cities and metropolitan areas.</p>
+            </div>
+            
+            <div class="cities-grid">
+                <div class="city-card">
+                    <h3><a href="houston/">Houston Veterinarians</a></h3>
+                    <p class="city-stats">247 Vets • 42 min avg response • $85 avg cost</p>
+                    <p>America's 4th largest city with comprehensive veterinary services including emergency care, specialty practices, and mobile vets.</p>
+                    <div class="city-services">
+                        <a href="houston/emergency-vet">Emergency Vets</a>
+                        <a href="houston/animal-hospital">Animal Hospitals</a>
+                        <a href="houston/24-hour-vet">24-Hour Care</a>
+                    </div>
+                </div>
+
+                <div class="city-card">
+                    <h3><a href="dallas/">Dallas Veterinarians</a></h3>
+                    <p class="city-stats">198 Vets • 38 min avg response • $82 avg cost</p>
+                    <p>Major metropolitan hub with advanced veterinary specialty centers and strong emergency clinic network.</p>
+                    <div class="city-services">
+                        <a href="dallas/emergency-vet">Emergency Vets</a>
+                        <a href="dallas/animal-hospital">Animal Hospitals</a>
+                        <a href="dallas/veterinarian">General Vets</a>
+                    </div>
+                </div>
+
+                <div class="city-card">
+                    <h3><a href="san-antonio/">San Antonio Veterinarians</a></h3>
+                    <p class="city-stats">176 Vets • 35 min avg response • $78 avg cost</p>
+                    <p>Historic city with military community support and bilingual veterinary services throughout the metro area.</p>
+                    <div class="city-services">
+                        <a href="san-antonio/emergency-vet">Emergency Vets</a>
+                        <a href="san-antonio/veterinarian">General Vets</a>
+                        <a href="san-antonio/pet-clinic">Pet Clinics</a>
+                    </div>
+                </div>
+
+                <div class="city-card">
+                    <h3><a href="austin/">Austin Veterinarians</a></h3>
+                    <p class="city-stats">152 Vets • 32 min avg response • $88 avg cost</p>
+                    <p>Keep Austin Weird with progressive pet care culture, holistic medicine, and dog-friendly city amenities.</p>
+                    <div class="city-services">
+                        <a href="austin/emergency-vet">Emergency Vets</a>
+                        <a href="austin/animal-hospital">Animal Hospitals</a>
+                        <a href="austin/veterinarian">General Vets</a>
+                    </div>
+                </div>
+
+                <div class="city-card">
+                    <h3><a href="fort-worth/">Fort Worth Veterinarians</a></h3>
+                    <p class="city-stats">143 Vets • 36 min avg response • $81 avg cost</p>
+                    <p>Cowtown heritage with strong equine veterinary services plus urban and rural companion animal care.</p>
+                    <div class="city-services">
+                        <a href="fort-worth/emergency-vet">Emergency Vets</a>
+                        <a href="fort-worth/veterinarian">General Vets</a>
+                        <a href="fort-worth/animal-hospital">Animal Hospitals</a>
+                    </div>
+                </div>
+
+                <div class="city-card">
+                    <h3><a href="el-paso/">El Paso Veterinarians</a></h3>
+                    <p class="city-stats">89 Vets • 44 min avg response • $72 avg cost</p>
+                    <p>Border city with unique health challenges, desert climate specialization, and bilingual veterinary services.</p>
+                    <div class="city-services">
+                        <a href="el-paso/emergency-vet">Emergency Vets</a>
+                        <a href="el-paso/veterinarian">General Vets</a>
+                        <a href="el-paso/pet-clinic">Pet Clinics</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Texas Veterinary Services -->
+    <section id="texas-services" class="services" role="main">
+        <div class="container">
+            <div class="section-header">
+                <h2>Veterinary Services Across Texas</h2>
+                <p>Comprehensive pet care services available throughout the Lone Star State.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚨</div>
+                    <h3>Emergency Veterinary Care</h3>
+                    <p>24/7 emergency vets across Texas specializing in snake bites, heat emergencies, and critical care. Average response time under 40 minutes statewide.</p>
+                    <div class="service-features">
+                        <span>Snake bite treatment</span>
+                        <span>Heat stroke prevention</span>
+                        <span>24/7 availability</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🩺</div>
+                    <h3>General Veterinarians</h3>
+                    <p>Routine and preventive care from licensed Texas veterinarians. Heartworm prevention, vaccinations, and wellness exams.</p>
+                    <div class="service-features">
+                        <span>Annual wellness exams</span>
+                        <span>Heartworm prevention</span>
+                        <span>State licensing verified</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🏥</div>
+                    <h3>Animal Hospitals</h3>
+                    <p>Full-service animal hospitals with advanced diagnostics, surgery, and specialty care throughout Texas metropolitan areas.</p>
+                    <div class="service-features">
+                        <span>Advanced diagnostics</span>
+                        <span>Surgical services</span>
+                        <span>Specialty consultations</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🌙</div>
+                    <h3>24-Hour Veterinary Clinics</h3>
+                    <p>Round-the-clock veterinary care for urgent situations, after-hours emergencies, and weekend pet health needs.</p>
+                    <div class="service-features">
+                        <span>24/7/365 availability</span>
+                        <span>Urgent care</span>
+                        <span>Weekend services</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🏪</div>
+                    <h3>Pet Clinics</h3>
+                    <p>Convenient neighborhood pet clinics for routine care, vaccinations, and basic treatments across Texas communities.</p>
+                    <div class="service-features">
+                        <span>Routine care</span>
+                        <span>Community clinics</span>
+                        <span>Affordable pricing</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🚐</div>
+                    <h3>Mobile Veterinarians</h3>
+                    <p>Mobile vet services bringing quality veterinary care directly to your home across Texas urban and rural areas.</p>
+                    <div class="service-features">
+                        <span>Home visits</span>
+                        <span>Reduced pet stress</span>
+                        <span>Convenient scheduling</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Texas Pet Care Information -->
+    <section class="texas-info" role="main">
+        <div class="container">
+            <div class="section-header">
+                <h2>Texas Pet Care Essentials</h2>
+                <p>Important information for Texas pet owners about state regulations, climate considerations, and regional health concerns.</p>
+            </div>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>🏛️ Texas Veterinary Regulations</h3>
+                    <ul>
+                        <li>All veterinarians must be licensed by the Texas State Board of Veterinary Medical Examiners</li>
+                        <li>Pet registration required in most Texas municipalities within 30 days</li>
+                        <li>Current rabies vaccination mandatory for dogs and cats</li>
+                        <li>Health certificates required for interstate pet travel</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>🌡️ Climate Considerations</h3>
+                    <ul>
+                        <li>Heat stroke prevention during hot Texas summers (100°F+ temperatures)</li>
+                        <li>Hurricane preparedness and pet evacuation planning for coastal areas</li>
+                        <li>Year-round heartworm prevention due to warm climate</li>
+                        <li>Tick and flea control programs essential statewide</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>🐍 Regional Health Concerns</h3>
+                    <ul>
+                        <li>Rattlesnake bite treatment and prevention education</li>
+                        <li>Fire ant sting allergic reactions</li>
+                        <li>West Nile Virus and other mosquito-borne diseases</li>
+                        <li>Ehrlichiosis and Rocky Mountain Spotted Fever from ticks</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>📊 Texas Pet Statistics</h3>
+                    <ul>
+                        <li>62% of Texas households own pets (above national average)</li>
+                        <li>8.5 million dogs and 6.2 million cats in Texas</li>
+                        <li>Average annual vet spending: $1,200 per pet</li>
+                        <li>3,200+ licensed veterinarians practicing statewide</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Find Your Texas Veterinarian?</h2>
+                <p>Connect with trusted, verified veterinarians across Texas in minutes, not hours.</p>
+                <div class="cta-buttons">
+                    <a href="../#contact" class="btn btn-primary">Find Vets Now</a>
+                    <a href="tel:555-123-4567" class="btn btn-secondary">Call (555) 123-4567</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="../images/logo.png" alt="TheVet.care" width="240" height="60" class="footer-logo">
+                    <p>Connecting pet owners with trusted local veterinarians nationwide.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Texas Cities</h4>
+                    <ul>
+                        <li><a href="houston/">Houston Vets</a></li>
+                        <li><a href="dallas/">Dallas Vets</a></li>
+                        <li><a href="austin/">Austin Vets</a></li>
+                        <li><a href="san-antonio/">San Antonio Vets</a></li>
+                        <li><a href="fort-worth/">Fort Worth Vets</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="../#services">Emergency Vets</a></li>
+                        <li><a href="../#services">General Vets</a></li>
+                        <li><a href="../#services">Animal Hospitals</a></li>
+                        <li><a href="../#services">24-Hour Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Nationwide Service<br>USA</p>
+                    <p><a href="mailto:hello@thevet.care">hello@thevet.care</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TheVet.care. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="../#privacy">Privacy Policy</a>
+                    <a href="../#terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        function searchTexasCityVets() {
+            const citySelect = document.getElementById('texasCitySelect');
+            const selectedCity = citySelect.value;
+            
+            if (selectedCity) {
+                window.location.href = selectedCity + '/';
+            } else {
+                alert('Please select a Texas city to find veterinarians.');
+            }
+        }
+    </script>
+</body>
+</html>
