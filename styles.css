@@ -250,10 +250,15 @@ p {
 @media (max-width: 768px) {
     .nav-container {
         justify-content: center;
+        position: relative;
     }
     
     .nav-toggle {
         display: flex;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
     }
     
     .nav-menu {
