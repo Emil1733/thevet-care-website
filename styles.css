@@ -248,6 +248,10 @@ p {
 
 /* Mobile Navigation */
 @media (max-width: 768px) {
+    .nav-container {
+        justify-content: center;
+    }
+    
     .nav-toggle {
         display: flex;
     }
