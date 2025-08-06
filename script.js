@@ -107,8 +107,86 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// FAQ Accordion Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('h3');
+        const answer = item.querySelector('.faq-answer');
+        
+        // Add click cursor and initial state
+        question.style.cursor = 'pointer';
+        question.style.position = 'relative';
+        
+        // Add plus/minus indicator
+        const indicator = document.createElement('span');
+        indicator.innerHTML = '+';
+        indicator.style.cssText = `
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            font-weight: bold;
+            color: #4f46e5;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        `;
+        question.appendChild(indicator);
+        
+        // Initially hide all answers with smooth transition
+        answer.style.maxHeight = '0';
+        answer.style.overflow = 'hidden';
+        answer.style.transition = 'max-height 0.3s ease-out, opacity 0.3s ease-out';
+        answer.style.opacity = '0';
+        
+        question.addEventListener('click', function() {
+            const isActive = item.classList.contains('active');
+            
+            // Close all FAQ items
+            faqItems.forEach(otherItem => {
+                const otherAnswer = otherItem.querySelector('.faq-answer');
+                const otherIndicator = otherItem.querySelector('h3 span');
+                
+                otherItem.classList.remove('active');
+                otherAnswer.style.maxHeight = '0';
+                otherAnswer.style.opacity = '0';
+                if (otherIndicator) {
+                    otherIndicator.innerHTML = '+';
+                    otherIndicator.style.transform = 'translateY(-50%) rotate(0deg)';
+                }
+            });
+            
+            // If this item wasn't active, open it
+            if (!isActive) {
+                item.classList.add('active');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                answer.style.opacity = '1';
+                indicator.innerHTML = '−';
+                indicator.style.transform = 'translateY(-50%) rotate(180deg)';
+            }
+        });
+        
+        // Add hover effect
+        question.addEventListener('mouseenter', function() {
+            question.style.backgroundColor = 'rgba(79, 70, 229, 0.05)';
+            question.style.padding = '20px';
+            question.style.margin = '-10px';
+            question.style.borderRadius = '8px';
+        });
+        
+        question.addEventListener('mouseleave', function() {
+            question.style.backgroundColor = '';
+            question.style.padding = '';
+            question.style.margin = '';
+            question.style.borderRadius = '';
+        });
+    });
+});
+
 // Form Handling
-document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+document.getElementById('vetFinderForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
     // Get form data
@@ -116,7 +194,7 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
     const data = Object.fromEntries(formData.entries());
     
     // Basic validation
-    const requiredFields = ['petName', 'ownerName', 'phone', 'email', 'service'];
+    const requiredFields = ['petType', 'location', 'serviceType', 'urgency'];
     let isValid = true;
     
     requiredFields.forEach(field => {
@@ -129,20 +207,14 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
         }
     });
     
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const emailInput = document.getElementById('email');
-    if (!emailRegex.test(data.email)) {
-        emailInput.style.borderColor = '#ef4444';
-        isValid = false;
-    }
-    
-    // Phone validation (basic)
-    const phoneRegex = /^[\+]?[1-9]?[\d\s\-\(\)]{10,}$/;
+    // Phone validation (optional field)
     const phoneInput = document.getElementById('phone');
-    if (!phoneRegex.test(data.phone.replace(/\s/g, ''))) {
-        phoneInput.style.borderColor = '#ef4444';
-        isValid = false;
+    if (data.phone && data.phone.trim() !== '') {
+        const phoneRegex = /^[\+]?[1-9]?[\d\s\-\(\)]{10,}$/;
+        if (!phoneRegex.test(data.phone.replace(/\s/g, ''))) {
+            phoneInput.style.borderColor = '#ef4444';
+            isValid = false;
+        }
     }
     
     if (isValid) {
@@ -165,7 +237,7 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
         }, 2000);
         
         // In a real application, you would send the data to your server here
-        console.log('Form data:', data);
+        console.log('Vet finder form data:', data);
     } else {
         // Show error message
         const firstInvalidField = this.querySelector('input[style*="border-color: rgb(239, 68, 68)"]');
@@ -176,23 +248,26 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
     }
 });
 
-// Phone number formatting
-document.getElementById('phone').addEventListener('input', function(e) {
-    let value = e.target.value.replace(/\D/g, '');
-    let formattedValue = '';
-    
-    if (value.length > 0) {
-        if (value.length <= 3) {
-            formattedValue = `(${value}`;
-        } else if (value.length <= 6) {
-            formattedValue = `(${value.slice(0, 3)}) ${value.slice(3)}`;
-        } else {
-            formattedValue = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6, 10)}`;
+// Phone number formatting (optional field)
+const phoneField = document.getElementById('phone');
+if (phoneField) {
+    phoneField.addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\D/g, '');
+        let formattedValue = '';
+        
+        if (value.length > 0) {
+            if (value.length <= 3) {
+                formattedValue = `(${value}`;
+            } else if (value.length <= 6) {
+                formattedValue = `(${value.slice(0, 3)}) ${value.slice(3)}`;
+            } else {
+                formattedValue = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6, 10)}`;
+            }
         }
-    }
-    
-    e.target.value = formattedValue;
-});
+        
+        e.target.value = formattedValue;
+    });
+}
 
 // Add loading state for external links
 document.querySelectorAll('a[href^="http"]').forEach(link => {
