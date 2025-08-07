@@ -186,7 +186,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Form Handling
-document.getElementById('vetFinderForm').addEventListener('submit', function(e) {
+const vetFinderForm = document.getElementById('vetFinderForm');
+if (vetFinderForm) {
+    vetFinderForm.addEventListener('submit', function(e) {
     e.preventDefault();
     
     // Get form data
@@ -247,6 +249,7 @@ document.getElementById('vetFinderForm').addEventListener('submit', function(e) 
         }
     }
 });
+}
 
 // Phone number formatting (optional field)
 const phoneField = document.getElementById('phone');
