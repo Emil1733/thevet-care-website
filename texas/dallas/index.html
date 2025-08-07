@@ -138,7 +138,7 @@
     </header>
 
     <!-- Breadcrumb -->
-    <nav class="breadcrumb" aria-label="breadcrumb">
+    <nav class="breadcrumb-nav" aria-label="breadcrumb">
         <div class="container">
             <ol class="breadcrumb-list">
                 <li class="breadcrumb-item"><a href="../../">TheVet.care</a></li>
@@ -174,9 +174,68 @@
                     </div>
                 </div>
                 
-                <div class="cta-buttons">
-                    <a href="emergency-vet" class="btn btn-primary">Find Emergency Vet</a>
-                    <a href="veterinarian" class="btn btn-secondary">Find General Vet</a>
+                <!-- Dallas Vet Search Form -->
+                <div id="dallas-search" class="search-container dallas-search">
+                    <form class="vet-search-form" action="../../search-dallas-vets" method="post">
+                        <input type="hidden" name="city" value="Dallas">
+                        <input type="hidden" name="state" value="Texas">
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="service_type">Service Needed *</label>
+                                <select id="service_type" name="service_type" required>
+                                    <option value="">Select Service Type</option>
+                                    <option value="emergency">Emergency Care</option>
+                                    <option value="general">General Veterinarian</option>
+                                    <option value="hospital">Animal Hospital</option>
+                                    <option value="24hour">24-Hour Care</option>
+                                    <option value="clinic">Pet Clinic</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="dallas_area">Dallas Area *</label>
+                                <select id="dallas_area" name="dallas_area" required>
+                                    <option value="">Select Dallas Area</option>
+                                    <option value="downtown">Downtown Dallas</option>
+                                    <option value="uptown">Uptown</option>
+                                    <option value="deep_ellum">Deep Ellum</option>
+                                    <option value="bishop_arts">Bishop Arts District</option>
+                                    <option value="lake_highlands">Lake Highlands</option>
+                                    <option value="preston_center">Preston Center</option>
+                                    <option value="oak_cliff">Oak Cliff</option>
+                                    <option value="richardson">Richardson</option>
+                                    <option value="plano">Plano</option>
+                                    <option value="other">Other Dallas Area</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="owner_name">Your Name *</label>
+                                <input type="text" id="owner_name" name="owner_name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pet_info">Pet Information</label>
+                            <input type="text" id="pet_info" name="pet_info" placeholder="Pet name, type, age (optional)">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large">Find Dallas Vets Now</button>
+                    </form>
+                </div>
+                
+                <div class="quick-links">
+                    <a href="emergency-vet" class="quick-link">Emergency Vet</a>
+                    <a href="veterinarian" class="quick-link">General Vet</a>
+                    <a href="animal-hospital" class="quick-link">Animal Hospital</a>
+                    <a href="24-hour-vet" class="quick-link">24-Hour Care</a>
+                    <a href="pet-clinic" class="quick-link">Pet Clinic</a>
                 </div>
             </div>
         </div>

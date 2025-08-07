@@ -125,7 +125,7 @@
     </header>
 
     <!-- Breadcrumb -->
-    <nav class="breadcrumb" aria-label="breadcrumb">
+    <nav class="breadcrumb-nav" aria-label="breadcrumb">
         <div class="container">
             <ol class="breadcrumb-list">
                 <li class="breadcrumb-item"><a href="../">TheVet.care</a></li>
@@ -442,13 +442,127 @@
         function searchTexasCityVets() {
             const citySelect = document.getElementById('texasCitySelect');
             const selectedCity = citySelect.value;
+            const button = document.querySelector('.search-btn');
             
             if (selectedCity) {
-                window.location.href = selectedCity + '/';
+                // Add loading state
+                button.textContent = 'Finding Vets...';
+                button.disabled = true;
+                button.style.opacity = '0.7';
+                
+                // Available cities that have pages
+                const availableCities = ['houston', 'dallas', 'san-antonio', 'austin', 'fort-worth', 'el-paso'];
+                
+                if (availableCities.includes(selectedCity)) {
+                    // Redirect to existing city page
+                    setTimeout(() => {
+                        window.location.href = '/texas/' + selectedCity + '/';
+                    }, 500);
+                } else {
+                    // Handle cities not yet available (like El Paso)
+                    setTimeout(() => {
+                        // Reset button
+                        button.textContent = 'Find Vets';
+                        button.disabled = false;
+                        button.style.opacity = '1';
+                        
+                        // Show coming soon message
+                        const errorDiv = document.createElement('div');
+                        errorDiv.className = 'alert alert-info';
+                        errorDiv.style.cssText = `
+                            background-color: #dbeafe;
+                            border: 1px solid #93c5fd;
+                            color: #1e40af;
+                            padding: 12px 16px;
+                            border-radius: 8px;
+                            margin-top: 12px;
+                            font-size: 14px;
+                            animation: fadeIn 0.3s ease-out;
+                        `;
+                        errorDiv.innerHTML = `
+                            <strong>Coming Soon!</strong> ${citySelect.options[citySelect.selectedIndex].text} veterinary pages are being built. 
+                            <br><a href="mailto:hello@thevet.care?subject=Request ${citySelect.options[citySelect.selectedIndex].text} Vets" style="color: #1e40af; text-decoration: underline;">Contact us</a> for immediate assistance finding vets in this area.
+                        `;
+                        
+                        const container = citySelect.parentNode;
+                        const existingError = container.querySelector('.alert-info, .alert-error');
+                        if (existingError) {
+                            existingError.remove();
+                        }
+                        
+                        container.appendChild(errorDiv);
+                        
+                        // Remove message after 10 seconds
+                        setTimeout(() => {
+                            if (errorDiv.parentNode) {
+                                errorDiv.remove();
+                            }
+                        }, 10000);
+                    }, 500);
+                }
             } else {
-                alert('Please select a Texas city to find veterinarians.');
+                // Better error handling with modern UI
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'alert alert-error';
+                errorDiv.style.cssText = `
+                    background-color: #fee2e2;
+                    border: 1px solid #fecaca;
+                    color: #dc2626;
+                    padding: 12px 16px;
+                    border-radius: 8px;
+                    margin-top: 12px;
+                    font-size: 14px;
+                    animation: fadeIn 0.3s ease-out;
+                `;
+                errorDiv.textContent = '⚠️ Please select a Texas city to find veterinarians.';
+                
+                const container = citySelect.parentNode;
+                const existingError = container.querySelector('.alert-error');
+                if (existingError) {
+                    existingError.remove();
+                }
+                
+                container.appendChild(errorDiv);
+                
+                // Focus the select element
+                citySelect.focus();
+                citySelect.style.borderColor = '#dc2626';
+                
+                // Remove error after 5 seconds
+                setTimeout(() => {
+                    if (errorDiv.parentNode) {
+                        errorDiv.remove();
+                    }
+                    citySelect.style.borderColor = '';
+                }, 5000);
             }
         }
+        
+        // Enhanced dropdown interaction
+        document.addEventListener('DOMContentLoaded', function() {
+            const citySelect = document.getElementById('texasCitySelect');
+            const searchBtn = document.querySelector('.search-btn');
+            
+            if (citySelect) {
+                citySelect.addEventListener('change', function() {
+                    if (this.value) {
+                        searchBtn.textContent = `Find ${this.options[this.selectedIndex].text} Vets`;
+                        searchBtn.classList.add('btn-ready');
+                    } else {
+                        searchBtn.textContent = 'Find Vets';
+                        searchBtn.classList.remove('btn-ready');
+                    }
+                });
+                
+                // Add keyboard support
+                citySelect.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        searchTexasCityVets();
+                    }
+                });
+            }
+        });
     </script>
 </body>
 </html>

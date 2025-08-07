@@ -138,7 +138,7 @@
     </header>
 
     <!-- Breadcrumb -->
-    <nav class="breadcrumb" aria-label="breadcrumb">
+    <nav class="breadcrumb-nav" aria-label="breadcrumb">
         <div class="container">
             <ol class="breadcrumb-list">
                 <li class="breadcrumb-item"><a href="../../">TheVet.care</a></li>
@@ -174,9 +174,66 @@
                     </div>
                 </div>
                 
-                <div class="cta-buttons">
-                    <a href="emergency-vet" class="btn btn-primary">Find Emergency Vet</a>
-                    <a href="veterinarian" class="btn btn-secondary">Find General Vet</a>
+                <!-- Fort Worth Vet Search Form -->
+                <div id="fort-worth-search" class="search-container fort-worth-search">
+                    <form class="vet-search-form" action="../../search-fort-worth-vets" method="post">
+                        <input type="hidden" name="city" value="Fort Worth">
+                        <input type="hidden" name="state" value="Texas">
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="service_type">Service Needed *</label>
+                                <select id="service_type" name="service_type" required>
+                                    <option value="">Select Service Type</option>
+                                    <option value="emergency">Emergency Care</option>
+                                    <option value="general">General Veterinarian</option>
+                                    <option value="hospital">Animal Hospital</option>
+                                    <option value="24hour">24-Hour Care</option>
+                                    <option value="clinic">Pet Clinic</option>
+                                    <option value="equine">Equine/Large Animal</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="fort_worth_area">Fort Worth Area *</label>
+                                <select id="fort_worth_area" name="fort_worth_area" required>
+                                    <option value="">Select Fort Worth Area</option>
+                                    <option value="downtown">Downtown Fort Worth</option>
+                                    <option value="cultural_district">Cultural District</option>
+                                    <option value="stockyards">Stockyards</option>
+                                    <option value="west_7th">West 7th</option>
+                                    <option value="westside">Westside</option>
+                                    <option value="southside">Southside</option>
+                                    <option value="tcu_area">TCU Area</option>
+                                    <option value="alliance">Alliance</option>
+                                    <option value="other">Other Fort Worth Area</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="owner_name">Your Name *</label>
+                                <input type="text" id="owner_name" name="owner_name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pet_info">Pet Information</label>
+                            <input type="text" id="pet_info" name="pet_info" placeholder="Pet name, type, age (optional)">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large">Find Fort Worth Vets Now</button>
+                    </form>
+                </div>
+                
+                <div class="quick-links">
+                    <a href="emergency-vet" class="quick-link">Emergency Vet</a>
+                    <a href="veterinarian" class="quick-link">General Vet</a>
+                    <a href="animal-hospital" class="quick-link">Animal Hospital</a>
                 </div>
             </div>
         </div>

@@ -3798,3 +3798,140 @@ textarea:focus {
         display: none;
     }
 }
+
+/* Coming Soon Notice Styles */
+.coming-soon-notice {
+    background: linear-gradient(135deg, #fef3c7 0%, #fbbf24 100%);
+    padding: 4rem 0;
+    text-align: center;
+    border-top: 3px solid #f59e0b;
+    border-bottom: 3px solid #f59e0b;
+}
+
+.notice-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.notice-content h2 {
+    color: #92400e;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.notice-content p {
+    color: #78350f;
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.notice-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.notice-actions .btn {
+    min-width: 180px;
+}
+
+/* Alert Styles for JavaScript Messages */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.alert {
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-top: 12px;
+    font-size: 14px;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.alert-error {
+    background-color: #fee2e2;
+    border: 1px solid #fecaca;
+    color: #dc2626;
+}
+
+.alert-info {
+    background-color: #dbeafe;
+    border: 1px solid #93c5fd;
+    color: #1e40af;
+}
+
+.alert a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+/* Quick Links Styling */
+.quick-links {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.quick-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(10px);
+}
+
+.quick-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.quick-link:active {
+    transform: translateY(0);
+}
+
+/* Responsive adjustments for coming soon */
+@media (max-width: 768px) {
+    .coming-soon-notice {
+        padding: 2rem 0;
+    }
+    
+    .notice-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .notice-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .notice-actions .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .quick-links {
+        gap: 0.5rem;
+    }
+    
+    .quick-link {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+}

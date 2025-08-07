@@ -1,5 +1,57 @@
 {
-  "buildCommand": "",
-  "outputDirectory": ".",
-  "installCommand": ""
+  "functions": {
+    "*.html": {
+      "runtime": "@vercel/static"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/texas/houston",
+      "destination": "/texas/houston/index.html"
+    },
+    {
+      "source": "/texas/houston/",
+      "destination": "/texas/houston/index.html"
+    },
+    {
+      "source": "/texas/dallas",
+      "destination": "/texas/dallas/index.html"
+    },
+    {
+      "source": "/texas/dallas/",
+      "destination": "/texas/dallas/index.html"
+    },
+    {
+      "source": "/texas/austin",
+      "destination": "/texas/austin/index.html"
+    },
+    {
+      "source": "/texas/austin/",
+      "destination": "/texas/austin/index.html"
+    },
+    {
+      "source": "/texas/san-antonio",
+      "destination": "/texas/san-antonio/index.html"
+    },
+    {
+      "source": "/texas/san-antonio/",
+      "destination": "/texas/san-antonio/index.html"
+    },
+    {
+      "source": "/texas/fort-worth",
+      "destination": "/texas/fort-worth/index.html"
+    },
+    {
+      "source": "/texas/fort-worth/",
+      "destination": "/texas/fort-worth/index.html"
+    },
+    {
+      "source": "/texas/el-paso",
+      "destination": "/texas/el-paso/index.html"
+    },
+    {
+      "source": "/texas/el-paso/",
+      "destination": "/texas/el-paso/index.html"
+    }
+  ]
 }

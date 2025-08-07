@@ -138,7 +138,7 @@
     </header>
 
     <!-- Breadcrumb -->
-    <nav class="breadcrumb" aria-label="breadcrumb">
+    <nav class="breadcrumb-nav" aria-label="breadcrumb">
         <div class="container">
             <ol class="breadcrumb-list">
                 <li class="breadcrumb-item"><a href="../../">TheVet.care</a></li>
@@ -174,9 +174,66 @@
                     </div>
                 </div>
                 
-                <div class="cta-buttons">
-                    <a href="emergency-vet" class="btn btn-primary">Find Emergency Vet</a>
-                    <a href="veterinarian" class="btn btn-secondary">Find General Vet</a>
+                <!-- San Antonio Vet Search Form -->
+                <div id="san-antonio-search" class="search-container san-antonio-search">
+                    <form class="vet-search-form" action="../../search-san-antonio-vets" method="post">
+                        <input type="hidden" name="city" value="San Antonio">
+                        <input type="hidden" name="state" value="Texas">
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="service_type">Service Needed *</label>
+                                <select id="service_type" name="service_type" required>
+                                    <option value="">Select Service Type</option>
+                                    <option value="emergency">Emergency Care</option>
+                                    <option value="general">General Veterinarian</option>
+                                    <option value="hospital">Animal Hospital</option>
+                                    <option value="24hour">24-Hour Care</option>
+                                    <option value="clinic">Pet Clinic</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="san_antonio_area">San Antonio Area *</label>
+                                <select id="san_antonio_area" name="san_antonio_area" required>
+                                    <option value="">Select San Antonio Area</option>
+                                    <option value="downtown">Downtown San Antonio</option>
+                                    <option value="southtown">Southtown</option>
+                                    <option value="north_side">North Side</option>
+                                    <option value="west_side">West Side</option>
+                                    <option value="east_side">East Side</option>
+                                    <option value="alamo_heights">Alamo Heights</option>
+                                    <option value="stone_oak">Stone Oak</option>
+                                    <option value="medical_center">Medical Center</option>
+                                    <option value="lackland_area">Lackland AFB Area</option>
+                                    <option value="other">Other San Antonio Area</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="owner_name">Your Name *</label>
+                                <input type="text" id="owner_name" name="owner_name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pet_info">Pet Information</label>
+                            <input type="text" id="pet_info" name="pet_info" placeholder="Pet name, type, age (optional)">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large">Find San Antonio Vets Now</button>
+                    </form>
+                </div>
+                
+                <div class="quick-links">
+                    <a href="emergency-vet" class="quick-link">Emergency Vet</a>
+                    <a href="veterinarian" class="quick-link">General Vet</a>
+                    <a href="pet-clinic" class="quick-link">Pet Clinic</a>
                 </div>
             </div>
         </div>
