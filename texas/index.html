@@ -439,6 +439,9 @@
 
     <script src="../script.js"></script>
     <script>
+        // Cache Buster - Version 2.0 - Fixed Redirect
+        console.log('Texas page script loaded - Version 2.0');
+        
         function searchTexasCityVets() {
             const citySelect = document.getElementById('texasCitySelect');
             const selectedCity = citySelect.value;
@@ -454,9 +457,12 @@
                 const availableCities = ['houston', 'dallas', 'san-antonio', 'austin', 'fort-worth', 'el-paso'];
                 
                 if (availableCities.includes(selectedCity)) {
-                    // Redirect to existing city page
+                    // Redirect to existing city page - FIXED VERSION
                     setTimeout(() => {
-                        window.location.href = '/texas/' + selectedCity + '/';
+                        // Force absolute URL construction to prevent browser path resolution issues
+                        const targetURL = window.location.protocol + '//' + window.location.host + '/texas/' + selectedCity + '/';
+                        console.log('REDIRECT DEBUG - Target URL:', targetURL);
+                        window.location.href = targetURL;
                     }, 500);
                 } else {
                     // Handle cities not yet available (like El Paso)
