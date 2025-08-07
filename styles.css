@@ -188,36 +188,52 @@ p {
     gap: var(--space-2);
 }
 
-.breadcrumb li {
+.breadcrumb-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: var(--space-2);
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumb li,
+.breadcrumb-item {
     display: flex;
     align-items: center;
     gap: var(--space-2);
 }
 
-.breadcrumb li:not(:last-child)::after {
+.breadcrumb li:not(:last-child)::after,
+.breadcrumb-item:not(:last-child)::after {
     content: '/';
     color: var(--text-light);
     font-weight: normal;
+    margin: 0 var(--space-2);
 }
 
 .breadcrumb a {
     color: var(--primary-color);
     text-decoration: none;
     transition: var(--transition-base);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
 }
 
 .breadcrumb a:hover {
     color: var(--primary-dark);
-    text-decoration: underline;
+    background-color: rgba(79, 70, 229, 0.1);
 }
 
-.breadcrumb li[aria-current="page"] {
+.breadcrumb li[aria-current="page"],
+.breadcrumb-item.active {
     color: var(--text-secondary);
     font-weight: 500;
 }
 
 @media (max-width: 768px) {
-    .breadcrumb {
+    .breadcrumb,
+    .breadcrumb-list {
         padding: 0 var(--space-3);
         font-size: var(--font-size-xs);
         overflow-x: auto;
@@ -226,8 +242,10 @@ p {
         gap: var(--space-1);
     }
     
-    .breadcrumb li {
+    .breadcrumb li,
+    .breadcrumb-item {
         gap: var(--space-1);
+        flex-shrink: 0;
     }
     
     .breadcrumb a {
@@ -3098,6 +3116,662 @@ textarea:focus {
     
     section {
         padding: var(--space-12) 0;
+    }
+}
+
+/* Texas-specific Styling */
+.texas-hero {
+    background: linear-gradient(135deg, #1e40af 0%, #7c3aed 100%);
+    position: relative;
+}
+
+.texas-hero::before {
+    content: '🤠';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 3rem;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.texas-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+    margin: var(--space-8) 0;
+    max-width: 500px;
+}
+
+@media (min-width: 640px) {
+    .texas-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .texas-stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.texas-stats .stat {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    text-align: center;
+    transition: all var(--transition-base);
+}
+
+.texas-stats .stat:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.texas-stats .stat-number {
+    display: block;
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: white;
+    margin-bottom: var(--space-1);
+}
+
+.texas-stats .stat-label {
+    font-size: var(--font-size-xs);
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+/* City-specific Hero Styling */
+.houston-hero {
+    background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%);
+}
+
+.houston-hero::before {
+    content: '🚀';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 3rem;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.dallas-hero {
+    background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+}
+
+.dallas-hero::before {
+    content: '🏙️';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 3rem;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.austin-hero {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+}
+
+.austin-hero::before {
+    content: '🎸';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 3rem;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.san-antonio-hero {
+    background: linear-gradient(135deg, #7c2d12 0%, #a3e635 100%);
+}
+
+.san-antonio-hero::before {
+    content: '🏛️';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 3rem;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.fort-worth-hero {
+    background: linear-gradient(135deg, #92400e 0%, #451a03 100%);
+}
+
+.fort-worth-hero::before {
+    content: '🤠';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 3rem;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+/* Cities Grid */
+.cities-section {
+    background: white;
+    padding: var(--space-16) 0;
+}
+
+.cities-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+}
+
+@media (min-width: 640px) {
+    .cities-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-10);
+    }
+}
+
+@media (min-width: 1024px) {
+    .cities-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-8);
+    }
+}
+
+.city-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+}
+
+.city-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--bg-gradient);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.city-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.city-card:hover::before {
+    opacity: 1;
+}
+
+.city-card h3 {
+    margin-bottom: var(--space-4);
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+}
+
+.city-card h3 a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: var(--transition-base);
+}
+
+.city-card h3 a:hover {
+    color: var(--primary-color);
+}
+
+.city-stats {
+    color: var(--text-light);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    margin-bottom: var(--space-4);
+    padding: var(--space-2) var(--space-4);
+    background: var(--bg-accent);
+    border-radius: var(--radius-md);
+    display: inline-block;
+}
+
+.city-card p {
+    color: var(--text-secondary);
+    margin-bottom: var(--space-6);
+    line-height: 1.6;
+}
+
+.city-services {
+    display: flex;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+}
+
+.city-services a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    padding: var(--space-2) var(--space-3);
+    background: rgba(79, 70, 229, 0.1);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
+}
+
+.city-services a:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* Neighborhoods Section */
+.neighborhoods-section {
+    background: var(--bg-secondary);
+    padding: var(--space-16) 0;
+}
+
+.neighborhoods-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+}
+
+@media (min-width: 640px) {
+    .neighborhoods-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-8);
+    }
+}
+
+@media (min-width: 1024px) {
+    .neighborhoods-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.neighborhood-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-base);
+}
+
+.neighborhood-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.neighborhood-card h4 {
+    color: var(--text-primary);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-3);
+    font-weight: 600;
+}
+
+.neighborhood-card p {
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Info Grid and Cards */
+.texas-info,
+.houston-info {
+    background: white;
+    padding: var(--space-16) 0;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+}
+
+@media (min-width: 640px) {
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-10);
+    }
+}
+
+@media (min-width: 1024px) {
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-12);
+    }
+}
+
+.info-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-base);
+}
+
+.info-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.info-card h3 {
+    color: var(--text-primary);
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-6);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.info-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-card li {
+    position: relative;
+    padding-left: var(--space-6);
+    margin-bottom: var(--space-4);
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.info-card li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+    background-color: var(--success-color);
+    color: white;
+    border-radius: 50%;
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-card li:last-child {
+    margin-bottom: 0;
+}
+
+/* Service Features and Areas */
+.service-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin: var(--space-6) 0;
+}
+
+.service-features span {
+    background: var(--bg-accent);
+    color: var(--primary-color);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+    border: 1px solid rgba(79, 70, 229, 0.2);
+}
+
+.service-areas {
+    margin-top: var(--space-4);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--border-color);
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+}
+
+.service-areas strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Emergency Section */
+.emergency-section {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    padding: var(--space-12) 0;
+    color: white;
+}
+
+.emergency-content {
+    display: flex;
+    align-items: center;
+    gap: var(--space-6);
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .emergency-content {
+        text-align: left;
+        justify-content: space-between;
+    }
+}
+
+.emergency-icon {
+    font-size: 4rem;
+    flex-shrink: 0;
+}
+
+.emergency-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.emergency-text h3 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-3);
+    color: white;
+}
+
+.emergency-text p {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.emergency-actions {
+    display: flex;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .emergency-actions {
+        justify-content: flex-start;
+    }
+}
+
+.emergency-actions .btn {
+    min-width: 160px;
+}
+
+.emergency-actions .btn-secondary {
+    background: white;
+    color: var(--error-color);
+    border-color: white;
+}
+
+.emergency-actions .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-color: white;
+}
+
+/* CTA Section */
+.cta-section {
+    background: var(--bg-secondary);
+    padding: var(--space-16) 0;
+    text-align: center;
+}
+
+.cta-content h2 {
+    color: var(--text-primary);
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-6);
+    font-weight: 700;
+}
+
+.cta-content p {
+    color: var(--text-secondary);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-10);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Search Select Styling */
+.search-select {
+    flex: 1;
+    padding: var(--space-4) var(--space-5);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    font-size: var(--font-size-base);
+    font-family: inherit;
+    background-color: white;
+    transition: all var(--transition-base);
+    min-height: 56px;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 12px center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    padding-right: var(--space-12);
+    appearance: none;
+}
+
+.search-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1), var(--shadow-md);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%234f46e5' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+}
+
+.btn-ready {
+    background: var(--success-color) !important;
+    transform: scale(1.02);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-ready:hover {
+    background: #059669 !important;
+}
+
+/* Stats Display for Cities */
+.houston-stats,
+.dallas-stats,
+.austin-stats,
+.san-antonio-stats,
+.fort-worth-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+    margin: var(--space-8) 0;
+    max-width: 600px;
+}
+
+@media (min-width: 640px) {
+    .houston-stats,
+    .dallas-stats,
+    .austin-stats,
+    .san-antonio-stats,
+    .fort-worth-stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Mobile Optimizations for Texas Pages */
+@media (max-width: 768px) {
+    .texas-stats {
+        grid-template-columns: 1fr;
+        gap: var(--space-3);
+    }
+    
+    .cities-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+    
+    .city-card {
+        padding: var(--space-6);
+    }
+    
+    .city-services {
+        flex-direction: column;
+        gap: var(--space-2);
+    }
+    
+    .city-services a {
+        display: inline-block;
+        text-align: center;
+    }
+    
+    .neighborhoods-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+    
+    .neighborhood-card {
+        padding: var(--space-4);
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+    
+    .info-card {
+        padding: var(--space-6);
+    }
+    
+    .emergency-content {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--space-4);
+    }
+    
+    .emergency-actions {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .emergency-actions .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 280px;
     }
 }
 
